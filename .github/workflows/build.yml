@@ -16,5 +16,5 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
       - name: Install dependencies
-        run: cd ./api && npm i install && node app.js
+        run: cd ./api && npm i install
   
