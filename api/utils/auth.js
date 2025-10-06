@@ -1,8 +1,16 @@
 const jwt = require('jsonwebtoken');
 const secretkey = process.env.JWT_SECRET_KEY
+const data = require('./users.json')
 
-function generateToken() {
-    return jwt.sign({ name: 'Doe', surname: 'John' }, secretkey)
+function generateToken(email, password) {
+    let user = data.users.find(user => user.email == email && user.password == password)
+
+    if (user) {
+        return jwt.sign({ name: user.name, surname: user.surname, email: user.email, id: user.id }, secretkey)
+    }
+    else {
+        throw Error("wrong credentials");
+    }
 }
 
 async function isAuth(req, res, next) {
