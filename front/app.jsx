@@ -21,7 +21,7 @@ function Nav() {
             <NavLink to="/data" className={navClass}>Data</NavLink>
             <NavLink to="/login" className={navClass}>Login</NavLink>
             <div style={{marginLeft:'auto'}} className="small">
-                {user ? <>Connecté : <strong>{user.username}</strong> · <button className="btn" onClick={logout}>Logout</button></> : <em>Non connecté</em>}
+                {user ? <>Connecté : <strong>{user.username}</strong> <button className="btn" onClick={logout}>Logout</button></> : <em>Non connecté</em>}
             </div>
         </nav>
     )

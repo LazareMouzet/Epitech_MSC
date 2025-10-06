@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export default function Login() {
-    const [username, setUsername] = useState('kminchelle')
-    const [password, setPassword] = useState('0lelplR')
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState('')
     const navigate = useNavigate()
@@ -53,7 +53,7 @@ export default function Login() {
                 <button className="btn" type="submit" disabled={loading}>
                     {loading ? 'Connexion…' : 'Se connecter'}
                 </button>
-                {error && <p role="alert" className="small">❌ {error}</p>}
+                {error && <p role="alert" className="small"> ❌ {error}</p>}
             </form>
         </div>
     )
