@@ -25,7 +25,7 @@ export default function Data() {
     return (
         <div>
             <h1>Data</h1>
-            <p className="small">Source: dummyjson.com pour une simulation de donnée.</p>
+            <p className="small">Source: dummyjson.com pour une simulation de donnée</p>
             {loading && <div className="card">Chargement…</div>}
             {error && <div className="card">Erreur: {error}</div>}
             {!loading && !error && (

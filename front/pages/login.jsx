@@ -44,7 +44,7 @@ export default function Login() {
         <div>
             <h1>Login</h1>
             <form onSubmit={onSubmit} className="card" aria-label="Formulaire de connexion">
-                <label htmlFor="username">Nom d'utilisateur</label>
+                <label htmlFor="username"> Nom d'utilisateur</label>
                 <input id="username" className="input" value={username} onChange={e=>setUsername(e.target.value)} required />
                 <div style={{ height: 8 }} />
                 <label htmlFor="password">Mot de passe</label>

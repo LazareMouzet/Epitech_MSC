@@ -4,7 +4,7 @@ export default function Home() {
     return (
         <div>
             <h1>Time Manager</h1>
-            <p className="small"> Bienvenue sur la page Home du boostrap </p>
+            <p className="small"> Bienvenue sur la page Home du boostrap MSC </p>
             <div className="center">
                 <img
                     className="hero"
