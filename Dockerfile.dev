@@ -1,6 +1,10 @@
 FROM node:20-alpine
 WORKDIR /app
-COPY api/package*.json .
+
+COPY api/package*.json ./
 RUN npm install
-COPY api/app.js .
-CMD ["node", "app.js"]
+
+COPY api/ ./
+
+EXPOSE 3000
+CMD ["npm", "run", "dev"]
