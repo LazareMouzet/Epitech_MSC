@@ -1,0 +1,17 @@
+name: build workflow
+on:
+  push:
+    branches:
+      - main
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Code checkout
+        uses: actions/checkout@v5.0.0nod
+      - name: Setup Node
+        uses: actions/setup-node@v4
+      - name: Install dependencies
+        run: cd ./api && node app.js
+  
