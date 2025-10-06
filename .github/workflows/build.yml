@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Code checkout
-        uses: actions/checkout@v5.0.0nod
+        uses: actions/checkout@v5.0.0
       - name: Setup Node
         uses: actions/setup-node@v4
       - name: Install dependencies
